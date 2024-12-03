@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Weather Man</title>
     <style>
+
         *{
             margin: 0;
             padding: 0;
@@ -14,9 +16,106 @@
             height: 100%;
             width: 100%;
         }
+        .super-parent-container{
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .parent-container{
+            background-color: white;
+            height: 75vh;
+            width: 450px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            
+        }
+
+            
+        .input-container {
+            margin-top: 10%;
+        position: relative;
+        display: flex;
+        height: 2.8rem;
+        width: 100%;
+        min-width: 200px;
+        max-width: 250px;
+        background-color: #fff;
+        border-radius: 50px;
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, .05);
+        }
+
+        .input-container input {
+            border-radius: 50px;
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid  rgb(176 190 197);
+        background-color: transparent;
+        padding: 0.625rem 70px 0.625rem 0.75rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 400;
+        color: rgb(69 90 100);
+        outline: none;
+        transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .input-container input:focus {
+        border: 1px solid rgb(236 72 153 );
+        }
+
+        .invite-btn {
+        position: absolute;
+        width: 65px;
+        right: 4px;
+        top: 4px;
+        bottom: 4px;
+        z-index: 10;
+        background-color: rgb(236 72 153 );
+        border-radius: 20px;
+        vertical-align: middle;
+        border: none;
+        transition: .6s ease;
+        }
+
+        .invite-btn:hover {
+        right: 2px;
+        top: 2px;
+        bottom: 2px;
+        border-radius: 50%;
+        }
+
+        .input-container input:placeholder-shown ~ .invite-btn {
+        pointer-events: none;
+        background-color: gray;
+        opacity: 0.5;
+        }
+        
     </style>
 </head>
 <body>
+<div class="super-parent-container">
+<div class="parent-container">
+
+    <form>
+<div class="input-container">
+  <input required="" placeholder="Enter the country" type="text">
+  <button class="invite-btn" type="submit">
+    <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+  </button>
+</form>
+</div>
+
+
+
+
+</div>
+</div>
+
     
 
     <script src="./scripts.js"></script>
