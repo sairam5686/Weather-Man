@@ -29,14 +29,11 @@
             height: 75vh;
             width: 450px;
             border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            
         }
 
             
         .input-container {
-            margin-top: 10%;
+        margin-top: 10%;
         position: relative;
         display: flex;
         height: 2.8rem;
@@ -46,10 +43,12 @@
         background-color: #fff;
         border-radius: 50px;
         box-shadow: 20px 20px 30px rgba(0, 0, 0, .05);
+        margin-left: auto;
+        margin-right: auto;
         }
 
         .input-container input {
-            border-radius: 50px;
+        border-radius: 50px;
         height: 100%;
         width: 100%;
         border-radius: 8px;
@@ -94,6 +93,15 @@
         background-color: gray;
         opacity: 0.5;
         }
+
+        .name-flag{
+           text-align: center;
+           margin-top: 30px;
+           font-size:15px;
+           font-weight: bolder;
+           font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
         
     </style>
 </head>
@@ -101,7 +109,7 @@
 <div class="super-parent-container">
 <div class="parent-container">
 
-    <form>
+<form class="api-form">
 <div class="input-container">
   <input required="" placeholder="Enter the country" type="text">
   <button class="invite-btn" type="submit">
@@ -110,6 +118,11 @@
 </form>
 </div>
 
+
+<div class="name-flag">
+    <h1>America 🏁</h1>
+    
+</div>
 
 
 
