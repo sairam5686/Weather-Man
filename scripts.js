@@ -9,16 +9,25 @@ form.addEventListener("submit", (e) => {
 //https://api.openweathermap.org/data/2.5/weather?units=metric&appid='
 
 const requester = async () => {
-  const city = search_bar.value.toLowerCase();
-  const response = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=8412f2a6f71551806f2c02e327775519`,
-    {
-      method: "GET",
-      // body: JSON.stringify(data)
+  try {
+    const city = search_bar.value.toLowerCase();
+    const response = await fetch(
+      `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=8412f2a6f71551806f2c02e327775519`,
+      {
+        method: "GET",
+        
+      }
+    )
+    if(!response.ok){
+      throw new Error(response.statusText);
     }
-  )
-    .then(console.log(response.ok))
-    .catch((error) => {
-      console.log(error);
-    });
+    const data = await response.json()
+    console.log(data);
+    
+      
+  } catch (error) {
+  console.log(error);
+  
+  }
+    
 };
